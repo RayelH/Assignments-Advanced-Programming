@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class GraphFrame extends JFrame {
 
-    private static final Dimension INITIAL_WINDOW_SIZE = new Dimension(500, 500);
+    private static final Dimension INITIAL_WINDOW_SIZE = new Dimension(500, 600);
 
     /**
      * Constructor for the GraphFrame class.
