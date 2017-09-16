@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.function.Function;
 
+/**
+ * This class represents the panel that contains the graph.
+ */
 public class GraphPanel extends JPanel {
 
     private final GraphFrame frame;
@@ -31,6 +34,8 @@ public class GraphPanel extends JPanel {
         double startPoint = -100; // start of the domain which we want to plot
         double endPoint = 100;    // end of the domain which we want to plot
         double stepSize = 0.3;    // the step size of the x value in the domain, determines the amount of evaluations done
+        int ovalWidth = 5;
+        int ovalHeight = 5;
 
         // create Graphics2D object to be able to draw on the panel
         Graphics2D gDraw = (Graphics2D) g;
@@ -43,7 +48,7 @@ public class GraphPanel extends JPanel {
             // evaluate function, JFrame counts height(y-axis) from top to bottom, so multiply by -1 to get a "normal" y-axis
             double y = -1*graphFunction.apply(x);
 
-            gDraw.drawOval((int)((frameSize.width/2) + X_SCALING_FACTOR*x), (int)(BOTTOM_MARGIN + Y_SCALING_FACTOR*y), 5, 5);
+            gDraw.drawOval((int)((frameSize.width/2) + X_SCALING_FACTOR*x), (int)(BOTTOM_MARGIN + Y_SCALING_FACTOR*y), ovalWidth, ovalHeight);
         }
     }
 

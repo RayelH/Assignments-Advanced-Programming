@@ -1,3 +1,6 @@
+/**
+ * This class lanches the application that shows the graph
+ */
 public class Launcher {
 
     public static void main(String[] args) {

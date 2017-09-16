@@ -1,6 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * This class builds the window on which the graph is shown.
+ */
 public class GraphFrame extends JFrame {
 
     private static final Dimension INITIAL_WINDOW_SIZE = new Dimension(500, 600);
