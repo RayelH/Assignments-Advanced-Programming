@@ -20,14 +20,14 @@ public class LoginActivity extends Activity {
      * Constructor for the LoginActivity class.
      */
     public LoginActivity() {
-        super(loginFrame, "login", INITIAL_WINDOW_SIZE);
+        super(loginFrame, "Login", INITIAL_WINDOW_SIZE);
         LoginClickListener eventListener = new LoginClickListener();
         addTextField(20, 1, 0, 3, 0);
         addTextField(20, 1, 1, 3, 1);
-        addLabel("username: ", 0, 0, 1);
-        addLabel("password: ", 0, 1, 1);
-        addButton("login", 1, 2, 1, eventListener);
-        addButton("exit", 2, 2, 1, eventListener);
+        addLabel("Username: ", 0, 0, 1);
+        addLabel("Password: ", 0, 1, 1);
+        addButton("Login", 1, 2, 1, eventListener);
+        addButton("Exit", 2, 2, 1, eventListener);
         loginFrame.setVisible(true);
     }
 
@@ -42,7 +42,7 @@ public class LoginActivity extends Activity {
         public void actionPerformed(ActionEvent event) {
 
             switch (event.getActionCommand()) {
-                case "login":
+                case "Login":
                     // if username and password are correct, close current window and create an instance of WelcomeActivity
                     if (getTextField(0).getText().equals("username") && getTextField(1).getText().equals("password")) {
 
@@ -58,7 +58,7 @@ public class LoginActivity extends Activity {
                     }
                     break;
 
-                case "exit":
+                case "Exit":
                     loginFrame.dispose();
                     break;
             }

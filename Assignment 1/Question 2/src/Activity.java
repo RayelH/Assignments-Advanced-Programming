@@ -104,6 +104,4 @@ public class Activity {
 
         return allTextFields.get(ID);
     }
-
-
 }

@@ -21,7 +21,7 @@ public class WelcomeActivity extends Activity {
         super(welcomeFrame, "Welcome", INITIAL_WINDOW_SIZE);
         WelcomeClickListener eventListener = new WelcomeClickListener();
         addLabel("Hello " + username + ", how are you today?", 0, 0, 3);
-        addButton("exit", 1, 1, 1, eventListener);
+        addButton("Exit", 1, 1, 1, eventListener);
         welcomeFrame.setVisible(true);
     }
 
@@ -33,7 +33,7 @@ public class WelcomeActivity extends Activity {
         public void actionPerformed(ActionEvent event) {
 
             switch (event.getActionCommand()) {
-                case "exit":
+                case "Exit":
                     welcomeFrame.dispose();
                     break;
             }
