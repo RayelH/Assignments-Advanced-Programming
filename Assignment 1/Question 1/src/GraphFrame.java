@@ -22,5 +22,4 @@ public class GraphFrame extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(true);
     }
-
 }

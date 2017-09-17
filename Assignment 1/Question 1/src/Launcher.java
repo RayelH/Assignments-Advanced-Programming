@@ -1,5 +1,5 @@
 /**
- * This class lanches the application that shows the graph
+ * This class launches the application that shows the graph
  */
 public class Launcher {
 
@@ -12,5 +12,4 @@ public class Launcher {
 
         frame.setVisible(true);
     }
-
 }

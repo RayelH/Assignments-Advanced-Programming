@@ -27,13 +27,13 @@ public class GraphPanel extends JPanel {
 
         Dimension frameSize = frame.getSize(); // gets the current Dimension of the frame, used for scaling
 
-        final double X_SCALING_FACTOR = 0.014*frameSize.width;
-        final double Y_SCALING_FACTOR = 0.001*frameSize.height;
-        final double BOTTOM_MARGIN = 0.90*frameSize.height;
+        final double X_SCALING_FACTOR = 0.014*frameSize.width;  // scaling for the x-axis
+        final double Y_SCALING_FACTOR = 0.001*frameSize.height; // scaling for the y-axis
+        final double BOTTOM_MARGIN = 0.90*frameSize.height;     // margin at the bottom of the frame
 
-        double startPoint = -100; // start of the domain which we want to plot
-        double endPoint = 100;    // end of the domain which we want to plot
-        double stepSize = 0.3;    // the step size of the x value in the domain, determines the amount of evaluations done
+        double startPoint = -100;  // start of the domain which we want to plot
+        double endPoint = 100;     // end of the domain which we want to plot
+        double stepSize = 0.3;     // the step size of the x value in the domain, determines the amount of evaluations done
         int ovalWidth = 5;
         int ovalHeight = 5;
 
@@ -51,5 +51,4 @@ public class GraphPanel extends JPanel {
             gDraw.drawOval((int)((frameSize.width/2) + X_SCALING_FACTOR*x), (int)(BOTTOM_MARGIN + Y_SCALING_FACTOR*y), ovalWidth, ovalHeight);
         }
     }
-
 }
