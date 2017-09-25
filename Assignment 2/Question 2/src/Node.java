@@ -1,5 +1,8 @@
 public class Node {
 
+
+
+    // https://stackoverflow.com/questions/20731833/constructing-a-binary-tree-in-java
     private int id;
     private int parent_id;
     private int leftChild_id;
