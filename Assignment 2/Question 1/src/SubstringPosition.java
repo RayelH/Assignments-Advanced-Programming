@@ -2,7 +2,7 @@ public class SubstringPosition {
 
     public static void main(String[] args) {
 
-        System.out.println(indexOf("Mississippi", "mis"));
+        System.out.println(indexOf("Mississippi", "sip"));
     }
 
     public static int indexOf(String text, String str) {
@@ -24,13 +24,7 @@ public class SubstringPosition {
         // call method with simpler input
         int index = indexOf(text.substring(1), str);
 
-        if(index == -1){
+        return (index == -1) ? -1 : 1 + index; // add 1 because every time the method is called, we "shift" an index in the original input
 
-            return -1;
-
-        } else{
-
-            return  1 + index; // add 1 because every time the method is called, we "shift" an index in the original input
-        }
     }
 }
