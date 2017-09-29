@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * You can put anything you like as the actual data in the node, and
  * can assume that each node always has two children.
  */
-public class Tree {
+public class p1 {
     /**
      * These are the variables a Tree object can have
      */

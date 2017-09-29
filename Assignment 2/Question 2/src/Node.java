@@ -1,20 +1,36 @@
 public class Node {
 
+    private String data;
+    private Node left;
+    private Node right;
 
-
-    // https://stackoverflow.com/questions/20731833/constructing-a-binary-tree-in-java
-    private int id;
-    private int parent_id;
-    private int leftChild_id;
-    private int rightChild_id;
-    private int data;
-
-    public Node(int id, int parent_id, int leftChild_id, int rightChild_id, int data) {
-
-        this.id = id;
-        this.parent_id = parent_id;
-        this.leftChild_id = leftChild_id;
-        this.rightChild_id = rightChild_id;
+    Node(String data) {
         this.data = data;
+        right = null;
+        left = null;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setLeft(Node left) {
+        this.left = left;
+    }
+
+    public Node getLeft() {
+        return left;
+    }
+
+    public void setRight(Node right ) {
+        this.right = right;
+    }
+
+    public Node getRight() {
+        return right;
     }
 }

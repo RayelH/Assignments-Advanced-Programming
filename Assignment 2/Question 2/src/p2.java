@@ -4,7 +4,7 @@
  * You can put anything you like as the actual data in the node, and
  * can assume that either each node always has two children or no children (true or false)
  */
-class Node {
+class p2 {
     /**
      * These are the variables a Tree object can have
      */
