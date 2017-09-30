@@ -5,7 +5,6 @@ public class Tree {
     private static Node root;
     private ArrayList<Node> Nodes = new ArrayList<Node>();
 
-
     public static void main(String[] args){
 
         Tree binaryTree = new Tree("A");
@@ -13,7 +12,7 @@ public class Tree {
         Node nodeB = new Node("B");
         binaryTree.addNode(nodeB, root, "left");
         Node nodeC = new Node("C");
-        binaryTree.addNode(nodeC, root, "right");
+        binaryTree.addNode(nodeC, nodeB, "left");
         Node nodeD = new Node("D");
         binaryTree.addNode(nodeD, nodeC, "left");
         Node nodeE = new Node("E");
@@ -38,13 +37,18 @@ public class Tree {
         binaryTree.addNode(nodeN, nodeM, "left");
         Node nodeO = new Node("O");
         binaryTree.addNode(nodeO, nodeM, "right");
+        
+        binaryTree.printTree();
+
+
+
 
 
     }
 
-    public Tree(String data){
+    public Tree(String rootData){
 
-        root = new Node(data);
+        root = new Node(rootData);
         Nodes.add(root);
 
     }
@@ -63,13 +67,29 @@ public class Tree {
         }
     }
 
-    public void printNode(Node node){
-
-        System.out.println((node.equals(root)) ? node.getData() : ("|----" + node.getData()));
-    }
 
     public void printTree(){
+        printTree(root, 0);
+    }
 
+    public void printTree(Node node, int depthCounter){
+
+           if(node != null) {
+
+               for(int i = 0; i< depthCounter; i++){
+                   System.out.print("|----");
+               }
+
+               System.out.println(node.getData());
+
+               depthCounter++;
+               printTree(node.getLeft(), depthCounter);
+               printTree(node.getRight(), depthCounter);
+
+
+           }
+
+        }
 
 
     }
@@ -78,4 +98,4 @@ public class Tree {
 
 
 
-}
+

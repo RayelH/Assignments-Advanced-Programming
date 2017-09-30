@@ -5,6 +5,7 @@ public class Node {
     private Node right;
 
     Node(String data) {
+
         this.data = data;
         right = null;
         left = null;
@@ -26,7 +27,7 @@ public class Node {
         return left;
     }
 
-    public void setRight(Node right ) {
+    public void setRight(Node right) {
         this.right = right;
     }
 
