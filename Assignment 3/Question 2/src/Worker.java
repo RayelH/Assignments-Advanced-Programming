@@ -1,7 +1,15 @@
+/**
+ * This class represents a Worker, which is an extension of a Thread.
+ */
 public class Worker extends Thread {
 
     String[] sortArray;
 
+    /**
+     * Constructor for Worker class.
+     *
+     * @param sortArray the array that needs to be sorted
+     */
     public Worker(String[] sortArray){
 
         this.sortArray = sortArray;
@@ -78,6 +86,7 @@ public class Worker extends Thread {
         }
     }
 
+    @Override
     public void run() {
         sort(sortArray);
     }
